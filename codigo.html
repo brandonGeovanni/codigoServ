@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Código QR</title>
+    <link rel="stylesheet" href="codigo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+    <script src="codigo.js" defer></script>
+</head>
+<body>
+
+    <div class="decoracion qr-izquierdo">▦</div>
+    <div class="decoracion qr-derecho">▦</div>
+
+    <main class="contenedor">
+
+        <div class="logo">
+            <span>▦</span>
+        </div>
+
+        <header>
+            <h1>Generador de <span>Código QR</span></h1>
+            <p>Escribe un texto o enlace para generar tu código QR.</p>
+        </header>
+
+        <section class="panel">
+
+            <label for="texto">
+                <span class="icono">↗</span>
+                Texto o enlace
+            </label>
+
+            <input
+                type="text"
+                id="texto"
+                placeholder="Escribe aquí tu texto o URL..."
+                autocomplete="off"
+            >
+
+            <button id="generar" class="btn-generar">
+                <span>▦</span> Generar QR
+            </button>
+
+            <div class="resultado">
+
+                <div id="codigoQR">
+                    <div class="mensaje-inicial">
+                        <span>▦</span>
+                        <p>Tu código QR aparecerá aquí</p>
+                    </div>
+                </div>
+
+                <p id="estado" class="estado" role="status" aria-live="polite">
+                    Esperando contenido...
+                </p>
+
+            </div>
+
+            <button id="descargar" class="btn-descargar" disabled>
+                ↓ Descargar QR
+            </button>
+
+            <div class="pie">
+                <span>●</span> Generador QR · Rápido y seguro
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
